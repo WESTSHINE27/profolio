@@ -1,0 +1,25 @@
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin padding{
+  padding: 3rem;
+  @include respond-to(tablet){
+    padding: 2rem;
+  }
+  @include respond-to(mobile){
+    padding: 1rem;
+  }
+}
+
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == mobile {
+    @media (max-width: $mobile) { @content; }
+  } @else if $breakpoint == tablet {
+    @media (max-width: $tablet) { @content; }
+  } @else if $breakpoint == desktop {
+    @media (min-width: $desktop) { @content; }
+  }
+}

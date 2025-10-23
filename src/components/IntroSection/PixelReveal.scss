@@ -1,0 +1,25 @@
+.image-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.image-wrapper img {
+  width: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.grid {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-columns: repeat(20, 1fr);
+  grid-template-rows: repeat(20, 1fr);
+}
+
+.tile {
+  background: #000000;
+  opacity: 1;
+  transition: opacity 1s ease-out;
+}
